@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dự đoán tỉ số trận đấu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input, button {
+            margin: 10px;
+            padding: 5px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dự đoán tỉ số trận đấu</h1>
+    <div>
+        <label for="team1">Đội 1:</label>
+        <input type="text" id="team1" placeholder="Tên đội 1">
+    </div>
+    <div>
+        <label for="team2">Đội 2:</label>
+        <input type="text" id="team2" placeholder="Tên đội 2">
+    </div>
+    <div>
+        <label for="score1">Tỉ số đội 1:</label>
+        <input type="number" id="score1" placeholder="Tỉ số đội 1">
+    </div>
+    <div>
+        <label for="score2">Tỉ số đội 2:</label>
+        <input type="number" id="score2" placeholder="Tỉ số đội 2">
+    </div>
+    <button onclick="predictScore()">Dự đoán</button>
+
+    <h2>Kết quả dự đoán:</h2>
+    <p id="result"></p>
+
+    <script>
+        function predictScore() {
+            var team1 = document.getElementById("team1").value;
+            var team2 = document.getElementById("team2").value;
+            var score1 = document.getElementById("score1").value;
+            var score2 = document.getElementById("score2").value;
+
+            var result = team1 + " " + score1 + " - " + team2 + " " + score2;
+            document.getElementById("result").innerText = result;
+        }
+    </script>
+</body>
+</html>
